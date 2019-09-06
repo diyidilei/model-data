@@ -100,6 +100,8 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("数量")
                 .setType("spin")
+                .setForceFillZero(false)
+                .setIncrement(10)
                 .setValue(0)
             );
             
