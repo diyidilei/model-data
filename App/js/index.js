@@ -128,34 +128,7 @@ xui.Class('App', 'xui.Module',{
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
         },
-        events:{
-            "onRender":[
-                {
-                    "desc":"设置价格",
-                    "type":"control",
-                    "target":"money",
-                    "args":[
-                        "{page.money.setUIValue()}",
-                        "global",
-                        "money"
-                    ],
-                    "method":"setUIValue",
-                    "redirection":"other:callback:call"
-                },
-                {
-                    "desc":"设置数量",
-                    "type":"control",
-                    "target":"num",
-                    "args":[
-                        "{page.num.setUIValue()}",
-                        "global",
-                        "num"
-                    ],
-                    "method":"setUIValue",
-                    "redirection":"other:callback:call"
-                }
-            ]
-        }
+        events:{ }
         /*,
         // To determine how properties affects this module
         propSetAction : function(prop){
