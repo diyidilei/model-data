@@ -90,6 +90,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"total")
+                .setName("total")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
                 .setTop("17.5em")
@@ -139,7 +140,8 @@ xui.Class('App', 'xui.Module',{
                             "{global.money}",
                             "{global.num}"
                         ],
-                        "method":"call"
+                        "method":"call",
+                        "return":false
                     },
                     {
                         "desc":"赋值",
