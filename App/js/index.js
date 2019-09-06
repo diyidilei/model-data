@@ -104,6 +104,46 @@ xui.Class('App', 'xui.Module',{
                 .setForceFillZero(false)
                 .setIncrement(10)
                 .setValue(0)
+                .onChange([
+                    {
+                        "desc":"修改全局变量",
+                        "type":"control",
+                        "target":"num",
+                        "args":[
+                            "{page.num.getUIValue()}",
+                            "global",
+                            "num"
+                        ],
+                        "method":"getUIValue",
+                        "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"计算",
+                        "type":"other",
+                        "target":"callback",
+                        "args":[
+                            "{functions.addNum}",
+                            "global",
+                            "total",
+                            "{global.money}",
+                            "{global.num}"
+                        ],
+                        "method":"call"
+                    },
+                    {
+                        "desc":"赋值",
+                        "type":"control",
+                        "target":"total",
+                        "args":[
+                            "{page.total.setUIValue()}",
+                            "none",
+                            "",
+                            "{global.total}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    }
+                ])
             );
             
             return children;
