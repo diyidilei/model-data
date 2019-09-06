@@ -52,6 +52,16 @@ xui.$cache.functions = {
             }
         ],
         "actions":[
+            {
+                "desc":"动作 1",
+                "type":"other",
+                "target":"msg",
+                "args":[
+                    "计算",
+                    "{args[0]} + {args[1]}"
+                ],
+                "method":"pop"
+            },
             function(num1, num2){
                 return(+num1)*(+num2)
             }
