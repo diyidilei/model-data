@@ -55,7 +55,7 @@ xui.Class('App', 'xui.Module',{
                             "{page.total.setUIValue()}",
                             "none",
                             "",
-                            "{global.money}+{global.num}"
+                            "(+{global.money})*(+{global.num})"
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
@@ -111,7 +111,7 @@ xui.Class('App', 'xui.Module',{
                             "{page.total.setUIValue()}",
                             "none",
                             "",
-                            "{global.money}+{global.num}"
+                            "(+{global.money})*(+{global.num})"
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
