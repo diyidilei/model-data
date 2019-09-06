@@ -37,7 +37,7 @@ xui.ini.$DefaultProp={
 
 // [[Global Functions
 xui.$cache.functions = {
-    "{functions.addNum}":{
+    "addNum":{
         "desc":"",
         "params":[
             {
@@ -52,9 +52,6 @@ xui.$cache.functions = {
             }
         ],
         "actions":[
-            function(num1, num2){
-                return(+num1)*(+num2)
-            },
             function(num1, num2){
                 return(+num1)*(+num2)
             }
