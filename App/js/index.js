@@ -22,14 +22,40 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput42")
+                .setHost(host,"money")
                 .setDirtyMark(false)
-                .setLeft("22.5em")
-                .setTop("16.666666666666668em")
+                .setLeft("12.5em")
+                .setTop("10.833333333333334em")
                 .setWidth("18em")
                 .setLabelSize("8em")
-                .setLabelCaption("数字微调框")
+                .setLabelCaption("价格")
                 .setType("spin")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"total")
+                .setDirtyMark(false)
+                .setLeft("12.5em")
+                .setTop("18.333333333333332em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("总价")
+                .setType("number")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"num")
+                .setDirtyMark(false)
+                .setLeft("12.5em")
+                .setTop("14.166666666666666em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("数量")
+                .setType("spin")
+                .setIncrement(1)
+                .setMin(0)
             );
             
             return children;
