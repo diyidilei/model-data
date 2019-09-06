@@ -63,7 +63,7 @@ xui.$cache.functions = {
                 "method":"pop"
             },
             function(num1, num2){
-                return(+num1)*(+num2)
+                return(+num1)*(+num2);
             }
         ]
     }
