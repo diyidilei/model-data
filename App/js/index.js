@@ -72,6 +72,17 @@ xui.Class('App', 'xui.Module',{
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"动作 4",
+                        "type":"other",
+                        "target":"msg",
+                        "args":[
+                            undefined,
+                            "{global.money}  + {global.num} = {global.total}"
+                        ],
+                        "method":"pop",
+                        "return":false
                     }
                 ])
             );
@@ -92,6 +103,7 @@ xui.Class('App', 'xui.Module',{
             append(
                 xui.create("xui.UI.ComboInput")
                 .setHost(host,"num")
+                .setName("num")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
                 .setTop("14.166666666666666em")
@@ -102,7 +114,6 @@ xui.Class('App', 'xui.Module',{
                 .setForceFillZero(false)
                 .setIncrement(10)
                 .setMin(0)
-                .setName("num")
                 .setValue(0)
                 .onChange([
                     {
