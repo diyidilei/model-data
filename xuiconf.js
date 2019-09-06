@@ -108,7 +108,7 @@ xui.$cache.functions = {
         ],
         "actions":[
             function(num1, num2){
-                return num1+num2;
+                return num1+num2
             }
         ]
     }
@@ -125,7 +125,6 @@ xui.$cache.data = {
 xui.constant = {
 };
 // ]]Constant Data
-
 
 // [[Develop Env Setting
 xui.ini.$DevEnv = {
