@@ -109,9 +109,9 @@ xui.Class('App', 'xui.Module',{
                     {
                         "desc":"定义全局变量",
                         "type":"control",
-                        "target":"money",
+                        "target":"num",
                         "args":[
-                            "{page.money.getUIValue()}",
+                            "{page.num.getUIValue()}",
                             "global",
                             "num"
                         ],
