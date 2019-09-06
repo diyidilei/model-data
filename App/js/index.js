@@ -72,17 +72,6 @@ xui.Class('App', 'xui.Module',{
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
-                    },
-                    {
-                        "desc":"动作 4",
-                        "type":"other",
-                        "target":"msg",
-                        "args":[
-                            undefined,
-                            "{global.money}  + {global.num} = {global.total}"
-                        ],
-                        "method":"pop",
-                        "return":false
                     }
                 ])
             );
