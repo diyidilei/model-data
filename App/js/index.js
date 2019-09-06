@@ -78,7 +78,7 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput285")
+                .setHost(host,"num'")
                 .setName("num")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
@@ -129,7 +129,34 @@ xui.Class('App', 'xui.Module',{
             // "return false" will cause all the internal UI controls will be added to the parent panel
             return false;
         },
-        events:{ }
+        events:{
+            "onRender":[
+                {
+                    "desc":"money",
+                    "type":"control",
+                    "target":"money",
+                    "args":[
+                        "{page.money.getUIValue()}",
+                        "global",
+                        "money"
+                    ],
+                    "method":"getUIValue",
+                    "redirection":"other:callback:call"
+                },
+                {
+                    "desc":"num",
+                    "type":"control",
+                    "target":"xui_ui_comboinput285",
+                    "args":[
+                        "{page.xui_ui_comboinput285.getUIValue()}",
+                        "global",
+                        "num"
+                    ],
+                    "method":"getUIValue",
+                    "redirection":"other:callback:call"
+                }
+            ]
+        }
         /*,
         // To determine how properties affects this module
         propSetAction : function(prop){
