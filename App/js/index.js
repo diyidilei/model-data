@@ -29,20 +29,7 @@ xui.Class('App', 'xui.Module',{
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("数字微调框")
-                .setType("spin")
-            );
-            
-            append(
-                xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput28")
-                .setDirtyMark(false)
-                .setLeft("17.5em")
-                .setTop("24.166666666666668em")
-                .setWidth("18em")
-                .setLabelSize("8em")
-                .setLabelCaption("数字微调框")
-                .setType("counter")
-                .setValue(0)
+                .setType("number")
             );
             
             return children;
