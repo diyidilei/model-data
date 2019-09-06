@@ -68,7 +68,7 @@ xui.Class('App', 'xui.Module',{
                 .setHost(host,"total")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
-                .setTop("18.333333333333332em")
+                .setTop("17.5em")
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("总价")
@@ -78,7 +78,7 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"num")
+                .setHost(host,"xui_ui_comboinput285")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
                 .setTop("14.166666666666666em")
@@ -87,31 +87,31 @@ xui.Class('App', 'xui.Module',{
                 .setLabelCaption("数量")
                 .setType("spin")
                 .setForceFillZero(false)
-                .setIncrement(1)
+                .setIncrement(10)
                 .setMin(0)
                 .setValue(0)
                 .onChange([
                     {
-                        "desc":"设置全局变量",
+                        "desc":"定义全局变量",
                         "type":"control",
-                        "target":"num",
+                        "target":"money",
                         "args":[
-                            "{page.num.setUIValue()}",
+                            "{page.money.getUIValue()}",
                             "global",
                             "num"
                         ],
-                        "method":"setUIValue",
+                        "method":"getUIValue",
                         "redirection":"other:callback:call"
                     },
                     {
-                        "desc":"计算总价",
+                        "desc":"计算",
                         "type":"control",
                         "target":"total",
                         "args":[
                             "{page.total.setUIValue()}",
                             "none",
                             "",
-                            "{global.num}+{global.money}"
+                            "{global.money}+{global.num}"
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
