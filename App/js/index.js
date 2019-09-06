@@ -22,14 +22,14 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput8")
+                .setHost(host,"xui_ui_comboinput42")
                 .setDirtyMark(false)
-                .setLeft("23.333333333333332em")
-                .setTop("15em")
+                .setLeft("22.5em")
+                .setTop("16.666666666666668em")
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("数字微调框")
-                .setType("number")
+                .setType("spin")
             );
             
             return children;
