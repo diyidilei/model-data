@@ -30,7 +30,6 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("价格")
                 .setType("spin")
-                .setDecimalSeparator("")
                 .setForceFillZero(false)
                 .setIncrement(10)
                 .setMin(0)
