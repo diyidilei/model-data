@@ -92,7 +92,8 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput511")
+                .setHost(host,"num")
+                .setName("num")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
                 .setTop("14.166666666666666em")
