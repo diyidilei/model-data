@@ -74,6 +74,7 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("总价")
                 .setType("number")
+                .setForceFillZero(false)
             );
             
             append(
@@ -86,7 +87,6 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("数量")
                 .setType("spin")
-                .setDecimalSeparator("")
                 .setForceFillZero(false)
                 .setIncrement(1)
                 .setMin(0)
