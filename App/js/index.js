@@ -91,8 +91,7 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"num'")
-                .setName("num")
+                .setHost(host,"num")
                 .setDirtyMark(false)
                 .setLeft("12.5em")
                 .setTop("14.166666666666666em")
@@ -103,6 +102,7 @@ xui.Class('App', 'xui.Module',{
                 .setForceFillZero(false)
                 .setIncrement(10)
                 .setMin(0)
+                .setName("num")
                 .setValue(0)
                 .onChange([
                     {
@@ -118,14 +118,27 @@ xui.Class('App', 'xui.Module',{
                         "redirection":"other:callback:call"
                     },
                     {
-                        "desc":"计算",
+                        "desc":"计算总价",
+                        "type":"other",
+                        "target":"callback",
+                        "args":[
+                            "{functions.addNum}",
+                            "global",
+                            "total",
+                            "{global.money}",
+                            "{global.num}"
+                        ],
+                        "method":"call"
+                    },
+                    {
+                        "desc":"赋值",
                         "type":"control",
                         "target":"total",
                         "args":[
                             "{page.total.setUIValue()}",
                             "none",
                             "",
-                            "(+{global.money})*(+{global.num})"
+                            "{global.total}"
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
