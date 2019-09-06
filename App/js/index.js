@@ -30,6 +30,38 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("价格")
                 .setType("spin")
+                .setDecimalSeparator("")
+                .setForceFillZero(false)
+                .setIncrement(10)
+                .setMin(0)
+                .setValue(0)
+                .onChange([
+                    {
+                        "desc":"定义全局变量",
+                        "type":"control",
+                        "target":"money",
+                        "args":[
+                            "{page.money.getUIValue()}",
+                            "global",
+                            "money"
+                        ],
+                        "method":"getUIValue",
+                        "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"计算",
+                        "type":"control",
+                        "target":"total",
+                        "args":[
+                            "{page.total.setUIValue()}",
+                            "none",
+                            "",
+                            "{global.money}+{global.num}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    }
+                ])
             );
             
             append(
@@ -54,8 +86,38 @@ xui.Class('App', 'xui.Module',{
                 .setLabelSize("8em")
                 .setLabelCaption("数量")
                 .setType("spin")
+                .setDecimalSeparator("")
+                .setForceFillZero(false)
                 .setIncrement(1)
                 .setMin(0)
+                .setValue(0)
+                .onChange([
+                    {
+                        "desc":"设置全局变量",
+                        "type":"control",
+                        "target":"num",
+                        "args":[
+                            "{page.num.setUIValue()}",
+                            "global",
+                            "num"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"计算总价",
+                        "type":"control",
+                        "target":"total",
+                        "args":[
+                            "{page.total.setUIValue()}",
+                            "none",
+                            "",
+                            "{global.num}+{global.money}"
+                        ],
+                        "method":"setUIValue",
+                        "redirection":"other:callback:call"
+                    }
+                ])
             );
             
             return children;
