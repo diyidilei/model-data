@@ -48,28 +48,30 @@ xui.Class('App', 'xui.Module',{
                         "redirection":"other:callback:call"
                     },
                     {
-                        "desc":"计算",
+                        "desc":"计算总价",
+                        "type":"other",
+                        "target":"callback",
+                        "args":[
+                            "{functions.addNum}",
+                            "global",
+                            "total",
+                            "{global.money}",
+                            "{global.num}"
+                        ],
+                        "method":"call"
+                    },
+                    {
+                        "desc":"赋值",
                         "type":"control",
                         "target":"total",
                         "args":[
                             "{page.total.setUIValue()}",
                             "none",
                             "",
-                            "(+{global.money})*(+{global.num})"
+                            "{global.total}"
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
-                    },
-                    {
-                        "desc":"动作 3",
-                        "type":"other",
-                        "target":"msg",
-                        "args":[
-                            "11",
-                            "(+{global.money})*(+{global.num})"
-                        ],
-                        "method":"alert",
-                        "onOK":2
                     }
                 ])
             );
