@@ -183,9 +183,9 @@ xui.Class('App', 'xui.Module',{
                 {
                     "desc":"num",
                     "type":"control",
-                    "target":"xui_ui_comboinput285",
+                    "target":"num",
                     "args":[
-                        "{page.xui_ui_comboinput285.getUIValue()}",
+                        "{page.num.getUIValue()}",
                         "global",
                         "num"
                     ],
