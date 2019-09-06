@@ -22,14 +22,26 @@ xui.Class('App', 'xui.Module',{
             
             append(
                 xui.create("xui.UI.ComboInput")
-                .setHost(host,"xui_ui_comboinput5")
+                .setHost(host,"xui_ui_comboinput8")
                 .setDirtyMark(false)
-                .setLeft("19.166666666666668em")
-                .setTop("14.166666666666666em")
+                .setLeft("23.333333333333332em")
+                .setTop("15em")
                 .setWidth("18em")
                 .setLabelSize("8em")
                 .setLabelCaption("数字微调框")
                 .setType("spin")
+            );
+            
+            append(
+                xui.create("xui.UI.ComboInput")
+                .setHost(host,"xui_ui_comboinput28")
+                .setDirtyMark(false)
+                .setLeft("17.5em")
+                .setTop("24.166666666666668em")
+                .setWidth("18em")
+                .setLabelSize("8em")
+                .setLabelCaption("数字微调框")
+                .setType("counter")
                 .setValue(0)
             );
             
