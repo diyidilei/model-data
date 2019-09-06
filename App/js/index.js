@@ -59,6 +59,17 @@ xui.Class('App', 'xui.Module',{
                         ],
                         "method":"setUIValue",
                         "redirection":"other:callback:call"
+                    },
+                    {
+                        "desc":"动作 3",
+                        "type":"other",
+                        "target":"msg",
+                        "args":[
+                            "11",
+                            "(+{global.money})*(+{global.num})"
+                        ],
+                        "method":"alert",
+                        "onOK":2
                     }
                 ])
             );
