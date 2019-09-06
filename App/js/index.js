@@ -103,6 +103,7 @@ xui.Class('App', 'xui.Module',{
                 .setType("spin")
                 .setForceFillZero(false)
                 .setIncrement(10)
+                .setMin(0)
                 .setValue(0)
                 .onChange([
                     {
